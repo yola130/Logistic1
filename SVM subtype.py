@@ -41,7 +41,7 @@ def main():
         predicted_proba = model.predict_proba(features)[0]
 
         # 根据预测概率的最高值来确定预测类别（但这里我们直接根据概率阈值判断)
-        high_risk_threshold = 0.24  # 24% 的阈值
+        high_risk_threshold = 0.22  # 24% 的阈值
         if predicted_proba[1] > high_risk_threshold:  # 假设模型输出的第二个概率是高风险类的概率
             predicted_class = 1  # Cluster2
         else: 
